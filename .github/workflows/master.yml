@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps: 
     - name: Construir a imagem do container docker
-      run: "Executar o docer build"
+      run: "executar o docker build"
     - name: Efetuar login no docker hub
-      run: echo "Executar o docker login"
+      run: echo "executar o docker login"
     - name: Enviar as imagens para o docker registry
-      run: echo "Executar o docker push"
+      run: echo "executar o docker push"
       
   CD:
     runs-on: ubuntu-20.04
