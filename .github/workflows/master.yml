@@ -35,12 +35,12 @@ jobs:
     steps: 
     - name: Checkout do repositorio
       uses: actions/checkout@v4.1.1
-    - name: Configuracai da credencial da AWS
+    - name: Configuracao da credencial da AWS
       uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
-          aws-region: us-east-1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
+        aws-region: us-east-1
     - name: Configurar o Kubeconfig
       run: echo "Configurar o Kubeconfig"
     - name: Aplicar o Deploy
